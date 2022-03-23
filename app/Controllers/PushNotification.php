@@ -16,7 +16,7 @@ class PushNotification extends BaseController
         /*api_key available in:
         Firebase Console -> Project Settings -> CLOUD MESSAGING -> Server key*/
         //change api key with your api key
-        $api_key = '<YOUR SERVER KEY';
+        $api_key = '<YOUR SERVER KEY>';
 
         $fields = array(
             'to' => $token,
