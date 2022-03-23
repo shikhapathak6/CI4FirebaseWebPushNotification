@@ -10,16 +10,16 @@ class PushNotification extends BaseController
     }
     public function sendPushNotification()
     {
-        $arr = $this->request->getPost('token');
+        $token = $this->request->getPost('token');
         $url = 'https://fcm.googleapis.com/fcm/send';
 
         /*api_key available in:
         Firebase Console -> Project Settings -> CLOUD MESSAGING -> Server key*/
         //change api key with your api key
-        $api_key = 'AAAAu4TQ90U:APA91bHK0A8xV3dElzCMLzCsU0-D6aYbDBl9aADPCMdA2HFY8TEyODzoj4LXY2r1cMDrAyzYTLkLiL_Azm4UbgHFPNDPQHLe_m5-DfRRiI8mXHEzlaGHV-Z_IHoiaRQ_3_3QhnBQGn7F';
+        $api_key = '<YOUR SERVER KEY';
 
         $fields = array(
-            'to' => $arr,
+            'to' => $token,
             'notification' => array(
                 "title" => "Hello World !",
                 "body" => "This is my First Notification."
