@@ -19,13 +19,14 @@
 		// Your web app's Firebase configuration
 		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 		const firebaseConfig = {
-			apiKey: "AIzaSyCgkRfVkuWHOL03eQK4PGxostzq75oVahc",
-			authDomain: "babaweb01239.firebaseapp.com",
-			projectId: "babaweb01239",
-			storageBucket: "babaweb01239.appspot.com",
-			messagingSenderId: "805387171653",
-			appId: "1:805387171653:web:211db03f58a83b7c47702c",
-			measurementId: "G-VFGSLK4GP4"
+			  apiKey: 'api-key',
+			  authDomain: 'project-id.firebaseapp.com',
+			  databaseURL: 'https://project-id.firebaseio.com',
+			  projectId: 'project-id',
+			  storageBucket: 'project-id.appspot.com',
+			  messagingSenderId: 'sender-id',
+			  appId: 'app-id',
+			  measurementId: 'G-measurement-id',
 		};
 
 
@@ -39,7 +40,7 @@
 		// Get registration token. Initially this makes a network call, once retrieved
 		// subsequent calls to getToken will return from cache.
 		messaging.getToken({
-			vapidKey: 'BHkQLR9RO_ZiQgn1HYudjesQF4YdLqiGqemIb7oTwGz7eotBvGIAdCq7d4cdnAH-r7WGecGHwko2XktPxVX7sIA'
+			vapidKey: '<YOUR_PUBLIC_VAPID_KEY_HERE>'
 		}).then((currentToken) => {
 			if (currentToken) {
 				// Send the token to your server and update the UI if necessary
